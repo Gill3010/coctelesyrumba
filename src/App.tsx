@@ -1,13 +1,29 @@
 import './App.css'
+import Logo from './components/Logo'
 import Header from './components/Header'
 import PaqueteCard from './components/PaqueteCard'
+import Carousel3D from './components/Carousel3D'
 import Footer from './components/Footer'
 
 function App() {
   const paquetes = [
     {
+      titulo: 'Paquete Básico',
+      precio: '$214.00',
+      caracteristicas: [
+        'Servicio barra',
+        'Mixólogo',
+        'Vasos',
+      ],
+      gradienteCard: 'bg-gradient-to-br from-cyan-400 via-blue-400 to-cyan-500',
+      gradienteHeader: 'bg-gradient-to-r from-cyan-300 via-blue-400 to-cyan-400',
+      gradientePrecio: 'from-cyan-300 to-blue-400',
+      esPopular: false,
+      borderEspecial: false,
+    },
+    {
       titulo: 'Paquete 20-50',
-      precio: '481.50',
+      precio: '$481.50',
       caracteristicas: [
         'Montaje de bar y desmontaje',
         'Coolers',
@@ -26,7 +42,7 @@ function App() {
     },
     {
       titulo: 'Paquete 60-90',
-      precio: '749.00',
+      precio: '$749.00',
       caracteristicas: [
         'Montaje de bar y desmontaje',
         'Coolers',
@@ -64,7 +80,7 @@ function App() {
   ]
 
   return (
-    <div className="relative min-h-screen">
+    <div className="relative min-h-screen overflow-x-hidden">
       {/* Video de fondo fijo */}
       <div className="fixed inset-0 z-0 overflow-hidden">
         <video
@@ -90,10 +106,11 @@ function App() {
 
       {/* Contenido */}
       <div className="relative z-10">
+        <Logo />
         <Header />
 
-      <div className="max-w-7xl mx-auto px-4 pb-12">
-        <div className="grid md:grid-cols-3 gap-8">
+      <div className="max-w-7xl mx-auto px-4 pb-12 overflow-x-hidden w-full">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {paquetes.map((paquete, index) => (
             <PaqueteCard
               key={index}
@@ -106,9 +123,12 @@ function App() {
               esPopular={paquete.esPopular}
               borderEspecial={paquete.borderEspecial}
               numeroPaquete={index + 1}
+              animationDelay={index * 100}
             />
           ))}
         </div>
+
+        <Carousel3D />
 
         <Footer />
       </div>

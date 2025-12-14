@@ -3,16 +3,25 @@ function Footer() {
     <div className="mt-12 space-y-6">
       {/* Opción sin paquete */}
       <div className="bg-gradient-to-r from-cyan-500 via-blue-500 to-cyan-600 rounded-2xl p-8 text-center border-4 border-cyan-400 shadow-[0_0_30px_rgba(34,211,238,0.6)]">
-        <p className="text-2xl md:text-3xl font-bold text-white mb-4">
-          🍹 Si no necesitas un paquete completo
+        <p className="text-2xl md:text-3xl font-bold text-white mb-4 flex items-center justify-center gap-3">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white drop-shadow-[0_0_8px_rgba(34,211,238,0.6)]">
+            <path d="M12 2v6M12 16v6M6 12h6M16 12h6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"/>
+            <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="2" fill="none"/>
+            <path d="M8 4l2 2M16 4l-2 2M8 20l2-2M16 20l-2-2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+          </svg>
+          Si no necesitas un paquete completo
         </p>
         <p className="text-xl md:text-2xl text-white font-semibold mb-2">
           También ofrecemos:
         </p>
         <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 mt-4">
           <div className="bg-white/20 rounded-xl px-6 py-4 backdrop-blur-sm">
-            <p className="text-lg md:text-xl text-white font-bold">
-              🍸 Servicio Profesional
+            <p className="text-lg md:text-xl text-white font-bold flex items-center justify-center gap-2">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white">
+                <path d="M12 2L2 7l10 5 10-5-10-5z" stroke="currentColor" strokeWidth="2" fill="none" strokeLinejoin="round"/>
+                <path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" strokeWidth="2" fill="none" strokeLinejoin="round"/>
+              </svg>
+              Servicio Profesional
             </p>
             <p className="text-white/90 text-sm md:text-base mt-1">
               Barra, bartenders y saloneros
@@ -20,13 +29,37 @@ function Footer() {
           </div>
           <div className="text-3xl text-cyan-300 font-bold drop-shadow-[0_0_10px_rgba(34,211,238,0.8)]">+</div>
           <div className="bg-white/20 rounded-xl px-6 py-4 backdrop-blur-sm">
-            <p className="text-lg md:text-xl text-white font-bold">
-              🚚 Barra Móvil
+            <p className="text-lg md:text-xl text-white font-bold flex items-center justify-center gap-2">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white">
+                <rect x="4" y="7" width="16" height="10" rx="2" stroke="currentColor" strokeWidth="2" fill="none"/>
+                <path d="M4 12h16M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" stroke="currentColor" strokeWidth="2" fill="none"/>
+                <circle cx="8" cy="19" r="2" fill="currentColor" opacity="0.8"/>
+                <circle cx="16" cy="19" r="2" fill="currentColor" opacity="0.8"/>
+                <path d="M12 7v10" stroke="currentColor" strokeWidth="1.5" strokeDasharray="2 2"/>
+              </svg>
+              Barra Móvil
             </p>
             <p className="text-white/90 text-sm md:text-base mt-1">
               Montaje y desmontaje
             </p>
           </div>
+        </div>
+        
+        {/* Servicio de Salonero */}
+        <div className="mt-6 bg-white/10 rounded-xl px-6 py-4 backdrop-blur-sm border-2 border-cyan-400/30">
+          <p className="text-lg md:text-xl text-white font-bold flex items-center justify-center gap-2 mb-2">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 4.17 4.42 9.92 6.24 12.11.4.48 1.12.48 1.52 0C14.58 18.92 19 13.17 19 9c0-3.87-3.13-7-7-7z" stroke="currentColor" strokeWidth="2" fill="none"/>
+              <circle cx="12" cy="9" r="3" stroke="currentColor" strokeWidth="2" fill="none"/>
+            </svg>
+            Servicio de Salonero
+          </p>
+          <p className="text-white/90 text-sm md:text-base">
+            Servicio adicional disponible
+          </p>
+          <p className="text-cyan-200 text-lg font-semibold mt-2">
+            Consulta precio
+          </p>
         </div>
         <p className="text-lg md:text-xl text-cyan-200 font-semibold mt-6 drop-shadow-[0_0_8px_rgba(34,211,238,0.6)]">
           ¡Contáctanos para un presupuesto personalizado!
@@ -34,8 +67,13 @@ function Footer() {
 
         {/* Sección de Contactos */}
         <div className="mt-8 pt-6 border-t border-cyan-400/30">
-          <h3 className="text-xl md:text-2xl font-bold text-white mb-6">
-            📱 Contáctanos
+          <h3 className="text-xl md:text-2xl font-bold text-white mb-6 flex items-center justify-center gap-3">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white drop-shadow-[0_0_6px_rgba(34,211,238,0.5)]">
+              <rect x="5" y="2" width="14" height="20" rx="2.5" stroke="currentColor" strokeWidth="2" fill="none"/>
+              <path d="M9 6h6M9 10h4" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+              <circle cx="12" cy="16" r="1.5" fill="currentColor"/>
+            </svg>
+            Contáctanos
           </h3>
           <div className="flex flex-wrap justify-center items-center gap-6 md:gap-8">
           {/* WhatsApp */}

@@ -1,9 +1,9 @@
 function Header() {
   return (
-    <div className="text-center py-8 px-4">
+    <div className="text-center pt-16 sm:pt-20 md:pt-24 lg:pt-28 pb-8 px-4">
       {/* Marca Principal */}
       <h1 
-        className="text-6xl md:text-8xl text-white mb-3 drop-shadow-2xl"
+        className="text-6xl md:text-8xl text-white mb-3 drop-shadow-2xl flex items-center justify-center gap-4 flex-wrap"
         style={{
           fontFamily: "'Poppins', sans-serif",
           fontWeight: 800,
@@ -15,7 +15,21 @@ function Header() {
           backgroundClip: 'text',
         }}
       >
-        Cócteles & Rumba
+        <span>Cócteles & Rumba</span>
+        <span
+          className="text-7xl md:text-9xl text-white"
+          style={{
+            fontFamily: "'Great Vibes', cursive",
+            fontWeight: 400,
+            letterSpacing: '2px',
+            textShadow: '0 0 20px rgba(34, 211, 238, 0.6), 0 0 40px rgba(34, 211, 238, 0.4)',
+            WebkitBackgroundClip: 'unset',
+            WebkitTextFillColor: 'white',
+            backgroundClip: 'unset',
+          }}
+        >
+          507
+        </span>
       </h1>
       
       {/* Firma del Dueño */}
