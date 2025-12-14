@@ -7,6 +7,7 @@ interface PaqueteCardProps {
   gradientePrecio: string
   esPopular?: boolean
   borderEspecial?: boolean
+  numeroPaquete: number
 }
 
 function PaqueteCard({
@@ -18,6 +19,7 @@ function PaqueteCard({
   gradientePrecio,
   esPopular = false,
   borderEspecial = false,
+  numeroPaquete,
 }: PaqueteCardProps) {
   return (
     <div
@@ -27,8 +29,11 @@ function PaqueteCard({
     >
       <div className={`${gradienteHeader} py-4 px-6`}>
         <h2 className="text-3xl font-bold text-white text-center">
-          {titulo}
-          <span className="text-xl"> (personas)</span>
+          <div>Paquete {numeroPaquete}</div>
+          <div className="text-2xl">
+            {titulo.replace('Paquete ', '')}
+            <span className="text-xl"> (personas)</span>
+          </div>
         </h2>
         {esPopular && (
           <p className="text-cyan-200 text-center mt-1 font-semibold drop-shadow-[0_0_8px_rgba(34,211,238,0.8)]">

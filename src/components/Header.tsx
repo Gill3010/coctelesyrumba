@@ -1,12 +1,56 @@
 function Header() {
   return (
     <div className="text-center py-8 px-4">
-      <h1 className="text-6xl md:text-7xl font-bold text-white mb-2 drop-shadow-2xl">
-        Cocteles & Rumba 507
+      {/* Marca Principal */}
+      <h1 
+        className="text-6xl md:text-8xl text-white mb-3 drop-shadow-2xl"
+        style={{
+          fontFamily: "'Poppins', sans-serif",
+          fontWeight: 800,
+          letterSpacing: '3px',
+          textShadow: '0 0 30px rgba(34, 211, 238, 0.6), 0 0 60px rgba(34, 211, 238, 0.4), 0 0 90px rgba(34, 211, 238, 0.2)',
+          background: 'linear-gradient(135deg, #ffffff 0%, #22d3ee 50%, #3b82f6 100%)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          backgroundClip: 'text',
+        }}
+      >
+        Cócteles & Rumba
       </h1>
-      <p className="text-2xl md:text-3xl font-semibold text-cyan-300 drop-shadow-[0_0_15px_rgba(34,211,238,0.8)]">
-        Día
-      </p>
+      
+      {/* Firma del Dueño */}
+      <div className="mb-4">
+        <p 
+          className="text-2xl md:text-3xl text-cyan-200"
+          style={{
+            fontFamily: "'Great Vibes', cursive",
+            fontWeight: 400,
+            letterSpacing: '3px',
+            transform: 'rotate(-1.5deg)',
+            textShadow: '0 0 15px rgba(34, 211, 238, 0.5), 0 0 30px rgba(34, 211, 238, 0.3)',
+            marginTop: '-10px',
+          }}
+        >
+          By Elvis Martínez
+        </p>
+      </div>
+      
+      {/* Descripción */}
+      <div className="max-w-3xl mx-auto mt-8 px-4">
+        <p 
+          className="text-xl md:text-2xl leading-relaxed italic relative z-10"
+          style={{
+            fontFamily: "'Dancing Script', cursive",
+            fontWeight: 600,
+            letterSpacing: '1.5px',
+            color: '#ffffff',
+            textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 15px rgba(34, 211, 238, 0.6), 0 0 30px rgba(34, 211, 238, 0.4)',
+            lineHeight: '1.9',
+          }}
+        >
+          Somos un servicio de coctelería, mixología y bar personalizado, donde haremos de tu evento, una experiencia única y divertida en Panamá.
+        </p>
+      </div>
     </div>
   )
 }
