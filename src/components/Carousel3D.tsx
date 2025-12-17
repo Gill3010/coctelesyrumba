@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 
 function Carousel3D() {
-  const images = ['/cr1.jpeg', '/cr2.jpeg', '/cr3.png']
+  const images = ['/cr1.jpeg', '/cr2.jpeg', '/cr3.png', '/cr4.jpeg', '/cr5.jpeg']
   const [currentIndex, setCurrentIndex] = useState(0)
 
   useEffect(() => {
